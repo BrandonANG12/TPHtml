@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>CompuQuality - Venta de productos de electrónica</title>
+    <link rel="icon" type="image/ico" href="sources/logo-ico.ico"/>
+</head>
+<body>
+    <header>
+        <!-- La etiqueta de párrafo la puse para poner algo resumido 
+            sobre lo que vendemos pero por el momento no se me ocurre nada.
+            y del H1 creo que también lo podríamos cambiar-->
+        <div class="company-info" id="intro">
+            <img src="/sources/Logo-name.png" alt="Logo de la compañía" class="header-logo">
+            <h1>Venta de productos de electrónica</h1>
+            <p></p>
+        </div>
+        <!-- 
+            La idea de esta barra de navegación es que para el celular
+            sea tipo hamburguesa (pueden ver en youtube para saber a 
+            que me refiero)
+        -->    
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="intro">Inicio</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="contact-us">Contáctanos</a></li>
+            </ul>
+            <form action="#" class="search-bar">
+                <input type="text" id="prod-search" class="search-bar" placeholder="Buscar un producto">
+                <button type="button" id="confirm-search" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <section class="news" id="news">
+            <h3>Las nuevas DDR5</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Perspiciatis officia iste provident quasi eveniet soluta, harum neque modi possimus dicta, odio consequatur magnam, quod maiores dolorum nobis debitis quis aperiam.</p>
+        </section>
+        <section class="products" id="products">
+            <div class="filter-options">
+                <button type="button">Reciente</button>
+                <button type="button">Más Vendido</button>
+                <form action="">
+                    <label for="product-sort">Ordenar precio:</label>
+                    <select name="ordenar-por" id="product-sort">
+                        <option value="minor-major">Menor a mayor</option>
+                        <option value="major-minor">Mayor a menor</option>
+                    </select>
+                </form>
+            </div>
+            <div class="products-list">
+                <!-- 
+                    Aca faltaría maquetar las tarjetas de los productos
+                -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-flex" id="contact-us">
+            <section class="footer-logo">
+                <img src="/sources/LogoSolo.png" alt="Logo de la compañía" class="logo-compania_pie">
+            </section>
+            <section id="contact-us_socialnet">
+                <a href="#"><i class="fa-brands fa-instagram"></i>compu_qualityCQ</a>
+                <a href="#"><i class="fa-brands fa-facebook"></i>CompuQuality</a>
+                <a href="#"><i class="fa-brands fa-twitter"></i>Compu_Quality02</a>
+            </section>
+        </div>    
+    </footer>
+    <script src="https://kit.fontawesome.com/12094a1489.js" crossorigin="anonymous"></script>
+</body>
+</html>
