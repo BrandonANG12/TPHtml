@@ -14,11 +14,6 @@
     --text-color-3:#fff;
 }
 
-html{
-    width: 100%;
-    box-sizing: border-box;
-}
-
 body{
     font-family: 'poppins', sans-serif;
     background: var(--bgcolor-page);
@@ -332,10 +327,17 @@ div.contenedor {
 }
 
 @media only screen and (max-width:900px) {
-    
 
     header div.contenedor_header ul li {
         display: inline;
+    }
+
+    h1{
+        font-size: 4em;
+    }
+
+    #reseñas{
+        font-size: 1.5em;
     }
 
     main, #reseñas, #contactanos {
@@ -386,21 +388,6 @@ div.contenedor {
     }
 }
 
-@media only screen and (max-width: 700px) {
-    header div.contenedor_header ul {
-        display: none;
-    }
-}
-
-header div.contenedor_header nav{
-    display: flex;
-}
-
-#menu, #menu-check{
-    display: none;
-}
-
-
 @media only screen and (max-width: 900px) {
     header div.contenedor_header, header div.contenedor_header ul, header div.contenedor_header ul li {
         display: flex
@@ -425,11 +412,42 @@ header div.contenedor_header nav{
 }
 
 @media only screen and (max-width: 700px) {
+    header div.contenedor_header ul {
+        display: none;
+    }
+
+    .contenedor_nav{
+        flex-basis: 15%;
+    }
+
+    .header_logo{
+        width: 45%;
+        height: 85%;
+    }
+}
+
+header div.contenedor_header nav{
+    display: flex;
+}
+
+#menu, #menu-check{
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
 
     header div.contenedor_header {
         display: flex;
         justify-content: space-between;
-        height: 12vh;
+        height: 8vh;
+    }
+
+    h1{
+        font-size: 2.5em;
+    }
+
+    footer{
+        font-size: .8em;
     }
 
     #menu-check:not(:checked) ~ nav {
