@@ -442,6 +442,10 @@ header div.contenedor_header nav{
         height: 8vh;
     }
 
+    #reseñas{
+        font-size: 1.2em;
+    }
+
     h1{
         font-size: 2.5em;
     }
