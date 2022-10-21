@@ -67,8 +67,16 @@ main{
     justify-content: center;
     width: 100%;
     height: 95vh;
-    background-image: url(/sources/imagen1.jpg);
     background-size: cover;
+}
+
+.background_wallpaper{
+    top: 0;
+    left: 0;
+    height: 95%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
 }
 
 main div.contenedor{
@@ -78,23 +86,35 @@ main div.contenedor{
     text-align: center;
 }
 
+.eslogan_item1{
+    animation: roll 4s ease 1s infinite backwards;
+}
+
+.eslogan_item2{
+    animation: roll 4s ease 3s infinite backwards;
+}
+
+#inicio .contenedor{
+    position: relative;
+}
+
 .pantalla_inicio h1, p{
     filter: drop-shadow(1px 1px 3px rgb(49, 48, 48));
     color: var(--text-color-3);
 }
 
-p.eslogan {
+.eslogan p {
     text-transform: uppercase;
     letter-spacing: 0.3em;
     font-weight: bold;
 }
 
-#reseñas {
+#resenas {
     background:var(--color-2);
     color: var(--text-color-1);
 }
 
-#reseñas li {
+#resenas li {
     background: var(--color-4);
 }
 
@@ -154,7 +174,7 @@ h1, h2 {
     color: var(--bgcolor-1);
 }
 
-#reseñas ul, footer ul{
+#resenas ul, footer ul{
     display: flex;
     place-content: space-between;
     margin: 0.2em 0 0.3em 0;
@@ -162,21 +182,21 @@ h1, h2 {
     list-style-type: none;
 }
 
-#reseñas, footer {
+#resenas, footer {
     padding: 1em;
 }
 
-#reseñas li img {
+#resenas li img {
     width: 5em;
     height: 5em;
 }
 
-#reseñas {
+#resenas {
     padding-top: 10em;
     padding-bottom: 10em;
 }
 
-#reseñas ul li {
+#resenas ul li {
     margin: 0 1em;
     text-align: center;
     padding: 2em 1em;
@@ -184,7 +204,7 @@ h1, h2 {
     border-radius: 1em;
 }
 
-#reseñas ul li img {
+#resenas ul li img {
     border: 5px solid var(--color-3);
     border-radius: 50%;
     margin-top: -15em;
@@ -307,9 +327,18 @@ div.contenedor {
     height: auto;
 }
 
-.tarjeta_producto p{
+.tarjeta_producto p, h5{
     filter: none;
     color: var(--text-color-2);
+}
+
+.nombre_producto{
+    margin-bottom: .5em;
+}
+
+.marca{
+    margin: 0%;
+    padding: 0;
 }
 
 .btn_agregar{
@@ -317,7 +346,7 @@ div.contenedor {
     color: var(--text-color-3);
     background-color: var(--bgcolor-page);
     padding: .3em .6em;
-    border-radius: 1em;
+    border-radius: .45em;
 }
 
 .btn_agregar:hover{
@@ -336,20 +365,20 @@ div.contenedor {
         font-size: 4em;
     }
 
-    #reseñas{
+    #resenas{
         font-size: 1.5em;
     }
 
-    main, #reseñas, #contactanos {
+    main, #resenas, #contactanos {
         box-sizing: border-box;
         padding: 3em 1em;
     }
 
-    #reseñas div.contenedor ul{
+    #resenas div.contenedor ul{
         display: block;
     }
 
-    #reseñas div.contenedor ul li {
+    #resenas div.contenedor ul li {
         display: block;
         margin: 4em auto 0 auto;
     }
@@ -442,7 +471,7 @@ header div.contenedor_header nav{
         height: 8vh;
     }
 
-    #reseñas{
+    #resenas{
         font-size: 1em;
     }
 
@@ -543,4 +572,19 @@ header div.contenedor_header nav{
 
 #contacta {
     opacity: 0;
+}
+
+@keyframes roll{
+    0%{
+        opacity: 0;
+        transform: translate3d(0, -70%, 0);
+    }
+    2.5%, 25%{
+        opacity: 1;
+        transform: translateZ(0);
+    }
+    27.5%, 100%{
+        opacity: 0;
+        transform: translate3d(0, 70%, 0);
+    }
 }
