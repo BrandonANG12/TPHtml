@@ -6,6 +6,7 @@
     --bgcolor-1: #ffff;
     --bgcolor-2: #20272e;
     --color-1: #ab49cc;
+    --color-1-t: #ab49cc70;
     --color-2:#ba9ce4;
     --color-3:#81de76;
     --color-4:#d1c4ff;
@@ -14,134 +15,56 @@
     --text-color-3:#fff;
 }
 
-body{
-    font-family: 'poppins', sans-serif;
-    background: var(--bgcolor-page);
-    color:var(--text-color-1);
-    box-sizing: border-box;
+html{
+    scroll-behavior: smooth;
 }
 
-header{
+body{
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.contenedor_header{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     background: var(--bgcolor-1);
 }
 
-header img{
-    width: 15%;
-    height: 15%;
+.header_logo{
+    align-items: center;
+    flex-basis: 60%;
 }
 
-div.contenedor_header {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: .8em;
+.logo{
+    width: 15%;
+    margin-left: 1rem;
 }
 
 .contenedor_nav{
-    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: auto 0;
-    justify-self: flex-end;
 }
 
-header ul{
+.contenedor_nav nav ul{
     display: flex;
-    list-style: none;
-    margin: 0;
+    list-style-type: none;
 }
 
-header li{
-    margin: 0 1em;
-}
-
-.fa-solid{
-    margin-right: .5em;
-}
-
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 95vh;
-    background-size: cover;
-}
-
-.background_wallpaper{
-    top: 0;
-    left: 0;
-    height: 95%;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-}
-
-main div.contenedor{
-    background: var(--bgcolor-page2);
-    height: 60%;
-    border-radius: .8em;
-    text-align: center;
-}
-
-.eslogan_item1{
-    animation: roll 4s ease 1s infinite backwards;
-}
-
-.eslogan_item2{
-    animation: roll 4s ease 3s infinite backwards;
-}
-
-#inicio .contenedor{
-    position: relative;
-}
-
-.pantalla_inicio h1, p{
-    filter: drop-shadow(1px 1px 3px rgb(49, 48, 48));
-    color: var(--text-color-3);
-}
-
-.eslogan p {
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    font-weight: bold;
-}
-
-#resenas {
-    background:var(--color-2);
-    color: var(--text-color-1);
-}
-
-#resenas li {
-    background: var(--color-4);
-}
-
-#contactanos {
-    background: var(--color-4);
-}
-
-footer{
-    background: var(--color-3);
-    color: var(--text-color-3);
-}
-
-footer ul {
-    margin-bottom: 0;
-}
-
-a {
+.contenedor_nav a{
     color: var(--text-color-1);
     text-decoration: none;
+    margin-right: .8rem;
 }
 
-a.intro{
-    font-weight: bold;
+.contenedor_nav .fa-solid{
+    margin-right: .5rem;
 }
 
-h1, h2 {
-    font-size: 3em
+#menu, #menu-check{
+    display: none;
 }
 
 .boton-principal {
@@ -174,112 +97,81 @@ h1, h2 {
     color: var(--bgcolor-1);
 }
 
-#resenas ul, footer ul{
-    display: flex;
-    place-content: space-between;
-    margin: 0.2em 0 0.3em 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-#resenas, footer {
-    padding: 1em;
-}
-
-#resenas li img {
-    width: 5em;
-    height: 5em;
-}
-
-#resenas {
-    padding-top: 10em;
-    padding-bottom: 10em;
-}
-
-#resenas ul li {
-    margin: 0 1em;
-    text-align: center;
-    padding: 2em 1em;
-    width: 80%;
-    border-radius: 1em;
-}
-
-#resenas ul li img {
-    border: 5px solid var(--color-3);
-    border-radius: 50%;
-    margin-top: -15em;
-}
-
-#contactanos{
-    position: relative;
-    padding-top: 10em;
-    padding-bottom: 14em;
-}
-
-#contactanos h2 {
-    font-size: 2em;
-}
-
-#contactanos label {
-    display: block;
-    font: 1.2em;
-    margin-bottom: 0.5em;
-}
-
-#contactanos input, #contactanos textarea {
-    width: 100%;
-    padding: 0.8em;
-    margin-bottom: 1em;
-    border-radius: 00.3em;
-    box-sizing: border-box;
-}
-
-#contactanos button{
-    cursor: pointer;
-}
-
-#contactanos div.contenedor div{
-    width: 45%;
-}
-
-#contactanos iframe {
-    position: absolute;
-    right: 0;
-    top: 0%;
-    width: 45%;
-    height: 100%;
-}
-
-footer ul {
-    place-content: space-evenly;
-}
-
-#contactanos div.contenedor {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-div.contenedor {
-    width: 100%;
-    max-width: 1080px;
-    margin: 0 auto;
-}
-
-#productos{
+.contenedor_pagina{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+}
+
+.inicio{
+    box-sizing: border-box;
+    display: flex;
     height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(/sources/imagen1.jpg);
+    background-size: cover;
+}
+
+.pantalla_inicio{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bgcolor-page2);
+    width: 60%;
+    height: 60%;
+    font-size: 1.5rem;
+    color: var(--text-color-3);
+    border-radius: 1rem;
+}
+
+.pantalla_inicio h1, p{
+    filter: drop-shadow(1px 1px 3px rgb(49, 48, 48));
+}
+
+.eslogan_item1{
+    position: absolute;
+    top: 2.5%;
+    left: 34%;
+    animation: roll 4s ease 1s infinite backwards;
+}
+
+.eslogan_item2{
+    position: absolute;
+    top: 2.5%;
+    left: 38%;
+    animation: roll 4s ease 3s infinite backwards;
+}
+
+.boton-principal{
+    text-decoration: none;
+}
+
+.productos{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: var(--bgcolor-page);
 }
 
 .search_container{
     justify-self: center;
-    margin: 2em;
+    margin: 1.2rem;
+    padding: .5rem 2rem;
     background-color: var(--color-2);
-    padding: 1em 2em;
-    border-radius: 2em;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 1rem;
+    text-align: center;
+    background: var(--color-2);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.contenedor_productos{
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 #ordenar{
@@ -302,24 +194,14 @@ div.contenedor {
     background: var(--color-1);
 }
 
-.contenedor_productos{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: var(--bgcolor-page);
-    flex-wrap: nowrap;
-    padding: 2em;
-}
-
 .tarjeta_producto{
     background: white;
     text-align: center;
-    width: 12em;
-    height: 18em;
-    border-radius: .5em;
-    margin: 1em;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 12rem;
+    height: 18rem;
+    border-radius: .5rem;
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .tarjeta_producto img{
@@ -347,100 +229,171 @@ div.contenedor {
     background-color: var(--bgcolor-page);
     padding: .3em .6em;
     border-radius: .45em;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .btn_agregar:hover{
     padding: .5em .8em;
     cursor: pointer;
     background-color: var(--color-2);
+    box-shadow: none
 }
 
-@media only screen and (max-width:900px) {
+.resenas{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 10rem .9rem;
+    box-sizing: border-box;
+    background: var(--color-2);
+}
 
-    header div.contenedor_header ul li {
-        display: inline;
+.resenas ul{
+    display: flex;
+    place-content: space-between;
+    margin: 0.2em 0 0.3em 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.resenas ul li {
+    margin: 0 1.5rem;
+    text-align: center;
+    padding: 2rem;
+    width: 80%;
+    border-radius: 1rem;
+    background: var(--color-4);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.resenas ul li img {
+    width: 5rem;
+    height: 5rem;
+    margin-top: -15rem;
+    border: 5px solid var(--color-3);
+    border-radius: 50%;
+}
+
+.contactanos{
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-4);
+}
+
+.input_contacto{
+    box-sizing: border-box;
+    padding: 8rem;
+    flex-basis: 50%;
+}
+
+.iframe_ubicacion{
+    flex-basis: 50%;
+}
+.contactanos input, .contactanos textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border-radius: 00.3em;
+    box-sizing: border-box;
+}
+
+.contacto{
+    opacity: 0;
+}
+
+.contactanos iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.footer_container{
+    background: var(--color-3);
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer_container ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer_container a{
+    color: var(--text-color-1);
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.footer_container .fa-brands{
+    margin-right: .4rem;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px){
+    .contenedor_header{
+        font-size: .8rem;
     }
 
-    h1{
-        font-size: 4em;
+    .contenedor_nav ul{
+        padding: 0;
     }
 
-    #resenas{
-        font-size: 1.5em;
+    .header_logo{
+        flex-basis: 25%;
     }
 
-    main, #resenas, #contactanos {
+    .logo{
+        height: 1.8rem;
+        width: auto;
+    }
+
+    .pantalla_inicio{
+        font-size: 1.4rem;
+    }
+
+    .eslogan_item1{
+        top: 2%;
+        left: 20%;
+    }
+    
+    .eslogan_item2{
+        top: 2%;
+        left: 30%;
+    }
+
+    .resenas{
+        height: auto;
         box-sizing: border-box;
-        padding: 3em 1em;
+        padding: 0;
     }
 
-    #resenas div.contenedor ul{
-        display: block;
-    }
-
-    #resenas div.contenedor ul li {
-        display: block;
-        margin: 4em auto 0 auto;
-    }
-
-    #contactanos div.contenedor {
-        display: block;
-    }
-
-    #contactanos div.contenedor div{
-        width: 100%;
-    }
-
-    #contactanos div.contenedor iframe {
-        position: relative;
-        width: 100%;
-        height: 400px;
-        margin-top: 2em;
-    }
-
-    header img{
-        height: 15%;
-        width: 15%;
-    }
-
-    .contenedor_productos{
+    .resenas ul{
         flex-direction: column;
         align-items: center;
+        height: 100%;
     }
 
-    .search_container{
-        text-align: center;
+    .resenas ul li{
+        box-sizing: border-box;
+        width: 75%;
+        margin: 4rem;
     }
 
-    #barra_busqueda{
-        margin-top: .6em;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    header div.contenedor_header, header div.contenedor_header ul, header div.contenedor_header ul li {
-        display: flex
-    }
-
-    header div.contenedor_header nav {
-        width: 100%;
-        display: inline;
-    }
-
-    header li{
-        margin: 0 .6em;
-    }
-
-    div.contenedor{
-        text-align: center;
-    }
-
-    .fa-solid{
-        font-size: .8em;
+    .input_contacto{
+        padding: 2rem;
     }
 }
 
 @media only screen and (max-width: 700px) {
+
+    header div.contenedor_header {
+        display: flex;
+        height: 8vh;
+    }
+
     header div.contenedor_header ul {
         display: none;
     }
@@ -450,77 +403,12 @@ div.contenedor {
     }
 
     .header_logo{
-        width: 45%;
-        height: 85%;
-    }
-}
-
-header div.contenedor_header nav{
-    display: flex;
-}
-
-#menu, #menu-check{
-    display: none;
-}
-
-@media only screen and (max-width: 700px) {
-
-    header div.contenedor_header {
-        display: flex;
-        justify-content: space-between;
-        height: 8vh;
+        width: 100%;
     }
 
-    #resenas{
-        font-size: 1em;
-    }
-
-    h1{
-        font-size: 2.5em;
-    }
-
-    footer{
-        font-size: .8em;
-    }
-
-    #menu-check:not(:checked) ~ nav {
-        display: none;   
-    }
-
-    #menu-check:checked ~ nav {
-        display: block;
-    }
-
-    #menu {
-        display: block;
-        color: var(--color-1);
-        background-color: var(--bgcolor-1);
-        font-size: 1.2em;
-        font-weight: bold;
-        border: 3px solid var(--color-1);
-        border-radius: 0.3em;
-        position: absolute;
-        right: 0.5em;
-        top: 0.5em;
-        z-index: 9999;
-
-    }
-
-    #menu:hover {
-        color: var(--text-color-3);
-        background: var(--color-1);
-    }
-
-    #menu-cerrar {
-        display: none;
-    }
-
-    #menu-check:checked ~ label #menu-abrir{
-        display: none;
-    }
-
-    #menu-check:checked ~ label #menu-cerrar {
-        display: block;
+    .logo{
+        height: 1.6rem;
+        width: auto;
     }
 
     header div.contenedor_header nav{
@@ -561,17 +449,106 @@ header div.contenedor_header nav{
         font-size: .8em;
     }
 
-    main{
-        text-align: center;
-    }
-
     #servicios ul li {
         width: 50%;
     }
+
+    .pantalla_inicio{
+        font-size: 1rem;
+        width: 85%;
+    }
+
+    .eslogan_item1{
+        top: 8%;
+        left: 28%;
+    }
+    
+    .eslogan_item2{
+        top: 8%;
+        left: 32%;
+    }
+
+    .contenedor_productos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos{
+        height: auto;
+    }
+
+    .resenas{
+        height: auto;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .resenas ul{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .resenas ul li{
+        box-sizing: border-box;
+        width: 75%;
+        margin: 4rem;
+    }
+
+    .contactanos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_contacto{
+        padding: 2rem;
+    }
+
+    .footer_container{
+        font-size: .8rem;
+    }
 }
 
-#contacta {
-    opacity: 0;
+@media only screen and (max-width: 700px) {
+
+    #menu-check:not(:checked) ~ nav {
+        display: none;   
+    }
+
+    #menu-check:checked ~ nav {
+        display: block;
+    }
+
+    #menu {
+        display: block;
+        color: var(--color-1);
+        background-color: var(--bgcolor-1);
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid var(--color-1);
+        border-radius: 0.3em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        z-index: 9999;
+    }
+
+    #menu:hover {
+        color: var(--text-color-3);
+        background: var(--color-1);
+    }
+
+    #menu-cerrar {
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-abrir{
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar {
+        display: block;
+    }
 }
 
 @keyframes roll{

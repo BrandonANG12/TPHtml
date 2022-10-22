@@ -13,7 +13,9 @@
 <body>
     <header>
         <div class="contenedor_header">
-            <img src="./sources/Logo-name2.png" alt="Logo de la compañía" class="header_logo">
+            <div class="header_logo">
+                <img src="./sources/Logo-name2.png" alt="Logo de la compañía" class="logo">
+            </div>
             <div class="contenedor_nav">
                 <input type="checkbox" id="menu-check">
                 <label id="menu" for="menu-check">
@@ -24,7 +26,6 @@
                 <nav>
                     <ul>
                         <li><a href="#inicio"><i class="fa-solid fa-house"></i>Inicio</a></li>
-                        <li><a href="#"><i class="fa-solid fa-star"></i>Novedades</a></li>
                         <li><a href="#productos"><i class="fa-solid fa-tag"></i>Productos</a></li>
                         <li><a href="#resenas"><i class="fa-solid fa-user"></i>Sobre Nosotros</a></li>
                         <li><a href="#contactanos" class="boton-invertido">Contáctanos</a></li>
@@ -33,136 +34,111 @@
             </div>
         </div>
     </header>
-    <main>
-        <div class="contenedor" id="inicio">
-            <div class="eslogan">
-                <p class="eslogan_item1">Los mejores productos</p>
-                <p class="eslogan_item2">Al mejor precio</p>
-            </div>
-            <div class="pantalla_inicio">
-                <h1>Todo en celulares y computadoras</h1>
-                <p><a href="#" class="boton-principal">Compra ahora</a></p>
-            </div>
-        </div>
-        <div class="background_image">
-            <img src="/sources/imagen1.jpg" alt="#" class="background_wallpaper">
-        </div>
-    </main>
-    <aside id="productos">
-        <div class="search_container">
-            <form class="orden">
-                <label for="orden">Ordenar por:</label>
-                <select name="orden" id="ordenar">
-                    <option value="menamay">Menor a Mayor</option>
-                    <option value="mayamen">Mayor a menor</option>
-                    <option value="relevante">Más relevantes</option>
-                </select>
-                    
-    
-                <input type="text" name="buscador" id="barra_busqueda" placeholder="Buscar producto">
-                <button value="buscar" id="btn_busqueda"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-        <div class="contenedor_productos">
-            <div class="tarjeta_producto">
-                <h3 class="nombre_producto">Iphone 12</h3>
-                <h5 class="marca">Apple</h5>
-                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-12-purple-2021?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1635202738000" alt="foto de producto">
-                <p class="precio">$147.000</p>
-                <div>
-                    <button value="carrito" class="btn_agregar">Agregar al carrito</button>
+        <main class="contenedor_pagina">
+            <section class="inicio" id="inicio">
+                <div class="pantalla_inicio">
+                    <div class="eslogan">
+                        <p class="eslogan_item1">Los mejores productos</p>
+                        <p class="eslogan_item2">Al mejor precio</p>
+                    </div>
+                    <h1>Todo en celulares y computadoras</h1>
+                    <p><a href="#" class="boton-principal">Compra ahora</a></p>
                 </div>
-            </div>
-            <div class="tarjeta_producto">
-                <h3 class="nombre_producto">Galaxy S22</h3>
-                <h5 class="marca">Samsung</h5>
-                <img src="https://m.media-amazon.com/images/I/71HUnJvHsbL._SL1500_.jpg" alt="foto de producto">
-                <p class="precio">$235.000</p>
-                <div>
-                    <button value="carrito" class="btn_agregar">Agregar al carrito</button>
+            </section>
+            <section class="productos" id="productos">
+                <div class="search_container">
+                    <form class="orden">
+                        <label for="orden">Ordenar por:</label>
+                        <select name="orden" id="ordenar">
+                            <option value="menamay">Menor a Mayor</option>
+                            <option value="mayamen">Mayor a menor</option>
+                            <option value="relevante">Más relevantes</option>
+                        </select>
+
+                        <input type="text" name="buscador" id="barra_busqueda" placeholder="Buscar producto">
+                        <button value="buscar" id="btn_busqueda"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                    </form>
                 </div>
-            </div>
-            <div class="tarjeta_producto">
-                <h3 class="nombre_producto">Note 10 Pro</h3>
-                <h5 class="marca">Xiaomi</h5>
-                <img src="https://crecos.vtexassets.com/arquivos/ids/220819/Smartphone--Xiaomi-Note-10-Pro-Color-Blanco.jpg?v=637866025863700000" alt="foto de producto">
-                <p class="precio">$80.000</p>
-                <div>
-                    <button value="carrito" class="btn_agregar">Agregar al carrito</button>
+                <div class="contenedor_productos">
+                    <div class="tarjeta_producto">
+                        <h3 class="nombre_producto">Iphone 12</h3>
+                        <h5 class="marca">Apple</h5>
+                        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-12-purple-2021?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1635202738000" alt="foto de producto">
+                        <p class="precio">$147.000</p>
+                        <div>
+                            <button value="carrito" class="btn_agregar">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="tarjeta_producto">
+                        <h3 class="nombre_producto">Galaxy S22</h3>
+                        <h5 class="marca">Samsung</h5>
+                        <img src="https://m.media-amazon.com/images/I/71HUnJvHsbL._SL1500_.jpg" alt="foto de producto">
+                        <p class="precio">$235.000</p>
+                        <div>
+                            <button value="carrito" class="btn_agregar">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="tarjeta_producto">
+                        <h3 class="nombre_producto">Note 10 Pro</h3>
+                        <h5 class="marca">Xiaomi</h5>
+                        <img src="https://crecos.vtexassets.com/arquivos/ids/220819/Smartphone--Xiaomi-Note-10-Pro-Color-Blanco.jpg?v=637866025863700000" alt="foto de producto">
+                        <p class="precio">$80.000</p>
+                        <div>
+                            <button value="carrito" class="btn_agregar">Agregar al carrito</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="tarjeta_producto">
-                <h3 class="nombre_producto">Galaxy Tab A7 Lite</h3>
-                <h5 class="marca">Samsung</h5>
-                <img src="https://d247h3ezrjpmwq.cloudfront.net/77869-large_default/tablet-samsung-galaxy-tad-a7-lite-.jpg" alt="foto de producto">
-                <p class="precio">$90.000</p>
-                <div>
-                    <button value="carrito" class="btn_agregar">Agregar al carrito</button>
-                </div>
-            </div>
-        </div>
-    </aside>
-    <aside id="resenas">
-        <div class="contenedor">
-            <ul>
-                <li>
-                    <img src="./sources/personaje1.jpeg" width="480">
-
-                    <blockquote>En CompuQuality siempre resuelven todas mis dudas. Excelente equipo de trabajo</blockquote>
-                    <cite>- Ana de Villa Luro</cite>
-                </li>
-                <li>
-                    <img src="./sources/personaje2.jpeg" width="480">
-
-                    <blockquote>CompuQuality tiene los mejores precios siempre</blockquote>
-                    <cite>- Agustina de Almagro</cite>
-                </li>
-                <li>
-                    <img src="./sources/personaje3.jpeg" width="480">
-
-                    <blockquote>Hace 20 años que compró todos mis productos tecnologicos en CompuQuality, los mejores de Villa Crespo</blockquote>
-                    <cite>- Martin de Palermo </cite>
-                </li>
-            </ul>
-        </div>
-    </aside>
-    <aside id="contactanos">
-        <div class="contenedor">
-            <div>
-                <h2>Contactanos</h2>
-
-                <form id=form action="" class="form">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name">
-
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email">
-
-                    <label for="message">Mensaje</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
-
-                    <!--<input type="submit" value="Enviar mensaje"> -->
-                    <button type="submit" class="boton-principal">Enviar mensaje</button>
-                </form>
-                <a href="mailto:lylezcano@gmail.com" id="contacta">mail</a>
-            </div>
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2322.467289322399!2d-58.441155505535086!3d-34.592407977468824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1665878099527!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>    
-        </div>    
-    </aside>
-    <footer>
-        <div class="contenedor">
-            <div class="footer-flex" id="contact-us">
-                <section class="footer-logo">
-                </section>
+            </section>
+            <section class="resenas" id="resenas">
                 <ul>
-                    <li></li><a href="#"><i class="fa-brands fa-instagram"></i>compu_qualityCQ</a>
-                    <li></li><a href="#"><i class="fa-brands fa-facebook"></i>CompuQuality</a>
-                    <li></li><a href="#"><i class="fa-brands fa-twitter"></i>Compu_Quality02</a>
+                    <li>
+                        <img src="./sources/personaje1.jpeg" width="480">
+                        <blockquote>En CompuQuality siempre resuelven todas mis dudas. Excelente equipo de trabajo</blockquote>
+                        <cite>- Ana de Villa Luro</cite>
+                    </li>
+                    <li>
+                        <img src="./sources/personaje2.jpeg" width="480">
+                        <blockquote>CompuQuality tiene los mejores precios siempre</blockquote>
+                        <cite>- Agustina de Almagro</cite>
+                    </li>
+                    <li>
+                        <img src="./sources/personaje3.jpeg" width="480">
+                        <blockquote>Hace 20 años que compró todos mis productos tecnologicos en CompuQuality, los mejores de Villa Crespo</blockquote>
+                        <cite>- Martin de Palermo </cite>
+                    </li>
                 </ul>
-        </div>    
-    </footer>
+            </section>
+            <section class="contactanos" id="contactanos">
+                <div class="input_contacto">
+                    <h2>Contactanos</h2>
+    
+                    <form id=form action="" class="form">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name">
+    
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+    
+                        <label for="message">Mensaje</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    
+                        <!--<input type="submit" value="Enviar mensaje"> -->
+                        <button type="submit" class="boton-principal">Enviar mensaje</button>
+                    </form>
+                    <a href="mailto:lylezcano@gmail.com" class="contacto" id="contacta">mail</a>
+                </div>
+                <div class="iframe_ubicacion">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2322.467289322399!2d-58.441155505535086!3d-34.592407977468824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1665878099527!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>    
+            </section>
+        </main>
+        <footer class="footer_container">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i>compu_qualityCQ</a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i>CompuQuality</a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i>Compu_Quality02</a></li>
+            </ul>
+        </footer>
     <script src="https://kit.fontawesome.com/12094a1489.js" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
 </body>
